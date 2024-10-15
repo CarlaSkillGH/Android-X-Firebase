@@ -18,10 +18,10 @@ public class Empleado {
     private String email;
     private String id;
 
-    public Empleado() {
+    public Empleado(String nombre, String apellido, String edad, String email, String direccion, String telefono, String cargo, String fnacimiento, String fcontratacion, String estado, String tipo_documento, String documento, String departamento, String s) {
     }
 
-    public Empleado(String tipo_id, String nombre, String apellido, String numero_id, String fnacimiento, String fcontratacion, String estado, String edad, String direccion, String departamento, String telefono, String cargo, String image, String email, String id) {
+    public Empleado(String tipo_id, String nombre, String apellido, String numero_id, String fnacimiento, String fcontratacion, String estado, String edad, String direccion, String departamento, String telefono, String cargo, String image, String email,String id) {
         this.tipo_id = tipo_id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -158,5 +158,4 @@ public class Empleado {
     public void setId(String id) {
         this.id = id;
     }
-
 }

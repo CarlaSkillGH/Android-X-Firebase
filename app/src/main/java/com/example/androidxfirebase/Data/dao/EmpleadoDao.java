@@ -60,6 +60,7 @@ public class EmpleadoDao {
         userData.put("fecha_contratacion", user.getFcontratacion());
         userData.put("estado_empleado", user.getEstado());
         userData.put("tipo_documento_identidad", user.getTipo_id());
+        userData.put("Numero_id", user.getNumero_id());
         userData.put("departamento", user.getDepartamento());
         userData.put("image", "");
 
@@ -95,6 +96,7 @@ public class EmpleadoDao {
         userData.put("fecha_contratacion", user.getFcontratacion());
         userData.put("estado_empleado", user.getEstado());
         userData.put("tipo_documento_identidad", user.getTipo_id());
+        userData.put("Numero_id", user.getNumero_id());
         userData.put("departamento", user.getDepartamento());
 
         db.collection(COLLECTION_NAME)
