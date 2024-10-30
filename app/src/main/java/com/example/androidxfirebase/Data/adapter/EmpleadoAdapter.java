@@ -37,18 +37,18 @@ public class EmpleadoAdapter extends RecyclerView.Adapter<EmpleadoAdapter.Emplea
     public void onBindViewHolder(@NonNull EmpleadoAdapter.EmpleadoViewHolder holder, int position) {
 
         Empleado empleado = empleadoList.get(position);
-        holder.userNameTextView.setText(empleado.getNombre());
-        holder.userApellidoTextView.setText(empleado.getApellido());
+        holder.userNameTextView.setText(empleado.getPrimer_nombre());
+        holder.userApellidoTextView.setText(empleado.getPrimer_apellido());
         holder.userEdadTextView.setText(empleado.getEdad());
-        holder.userEmailTextView.setText(empleado.getEmail());
-        holder.userDireccionTextView.setText(empleado.getDireccion());
+        holder.userEmailTextView.setText(empleado.getCorreo());
+        holder.userDireccionTextView.setText(empleado.getCiudad());
         holder.userTelefonoTextView.setText(empleado.getTelefono());
         holder.userCargoTextView.setText(empleado.getCargo());
-        holder.userFnacimientoTextView.setText(empleado.getFnacimiento());
-        holder.userFcontratacionTextView.setText(empleado.getFcontratacion());
-        holder.userEstadoTextView.setText(empleado.getEstado());
-        holder.userTipo_idTextView.setText(empleado.getTipo_id());
-        holder.userNumero_idTextView.setText(empleado.getNumero_id());
+        holder.userFnacimientoTextView.setText(empleado.getFecha_nacimiento());
+        holder.userFcontratacionTextView.setText(empleado.getFecha_contratacion());
+        holder.userEstadoTextView.setText(empleado.getEstado_empleado());
+        holder.userTipo_idTextView.setText(empleado.getTipo_documento_identidad());
+        holder.userNumero_idTextView.setText(empleado.getNumero_documento_identidad());
         holder.userDepartamentoTextView.setText(empleado.getDepartamento());
 
         Glide.with(holder.itemView.getContext()).load(empleado.getImage()).into(holder.empleadoPhotoImageView);
@@ -78,8 +78,8 @@ public class EmpleadoAdapter extends RecyclerView.Adapter<EmpleadoAdapter.Emplea
         private TextView userFcontratacionTextView;
         private TextView userTipo_idTextView;
         private TextView userEstadoTextView;
-        private TextView userNumero_idTextView;
         private TextView userDepartamentoTextView;
+        private TextView userNumero_idTextView;
         private ImageView empleadoPhotoImageView;
 
         public EmpleadoViewHolder(@NonNull View itemView) {
@@ -95,9 +95,10 @@ public class EmpleadoAdapter extends RecyclerView.Adapter<EmpleadoAdapter.Emplea
             userFcontratacionTextView = itemView.findViewById(R.id.userFcontratacionTextView);
             userTipo_idTextView = itemView.findViewById(R.id.userTipo_idTextView);
             userEstadoTextView = itemView.findViewById(R.id.userEstadoTextView);
-            userNumero_idTextView = itemView.findViewById(R.id.userNumero_idTextView);
             userDepartamentoTextView = itemView.findViewById(R.id.userDepartamentoTextView);
+            userNumero_idTextView = itemView.findViewById(R.id.userNumero_idTextView);
             empleadoPhotoImageView = itemView.findViewById(R.id.empleadoPhotoImageView);
+
         }
     }
 

@@ -1,10 +1,7 @@
 package com.example.androidxfirebase;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -53,18 +50,17 @@ public class ListEmpleadoActivity extends AppCompatActivity {
                     empleadoAdapter = new EmpleadoAdapter(empleados, new OnSuccessListener<Empleado>() {
                         @Override
                         public void onSuccess(Empleado empleado) {
-                            Toast.makeText(ListEmpleadoActivity.this, "Empleado: " + empleado.getNombre(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ListEmpleadoActivity.this, "Empleado: " + empleado.getPrimer_nombre(), Toast.LENGTH_SHORT).show();
                         }
                     });
                     recyclerView.setAdapter(empleadoAdapter);
                     for (Empleado empleado : empleados) {
-                        Log.d("ListEmpleadoActivity", "Empleado: " + empleado.getNombre());
+                        Log.d("ListEmpleadoActivity", "Empleado: " + empleado.getPrimer_nombre());
                     }
                 }
             });
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
-
     @Override
     protected void onDestroy() {
         super.onDestroy();

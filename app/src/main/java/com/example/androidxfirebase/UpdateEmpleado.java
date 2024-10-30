@@ -1,5 +1,6 @@
 package com.example.androidxfirebase;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -14,26 +15,24 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.androidxfirebase.Data.adapter.EmpleadoAdapter;
 import com.example.androidxfirebase.Data.dao.EmpleadoDao;
 import com.example.androidxfirebase.Data.model.Empleado;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-public class CreateEmpleadoActivity extends AppCompatActivity {
+public class UpdateEmpleado extends AppCompatActivity {
 
     private FirebaseFirestore db;
     private EmpleadoDao empleadoDao;
-    private EditText editTextEmpleadoname,editTextEmail,editTextApellido,editTextEdad,editTextDireccion,editTextTelefono,editTextCargo,editTextFnacimiento,editTextFcontratacion,editTextEstado,editTextTipoDocumento,editTextDepartamento,editTextNumeroDocumento;
-    private Button regresar,crear;
+    private EditText editTextEmpleadoname,editTextEmail,editTextApellido,editTextEdad,editTextDireccion,editTextTelefono,editTextCargo,editTextFnacimiento,editTextFcontratacion,editTextEstado,editTextTipoDocumento,editTextDepartamento,editTextNumeroDocumento,editTextID;
+    private Button buttonUpdateEmpleado,buttonUpdateImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_create_empleado);
+        setContentView(R.layout.activity_update_empleado);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -43,9 +42,10 @@ public class CreateEmpleadoActivity extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
         empleadoDao = new EmpleadoDao(db);
 
-        regresar = findViewById(R.id.buttonReturnU);
-        crear = findViewById(R.id.buttonCreateEmpleado);
+        buttonUpdateEmpleado = findViewById(R.id.buttonUpdateEmpleado);
+        buttonUpdateImage = findViewById(R.id.buttonUpdateImage);
         editTextEmpleadoname = findViewById(R.id.editTextEmpleadoname);
+        editTextID = findViewById(R.id.editTextID);
         editTextApellido = findViewById(R.id.editTextApellido);
         editTextEmail = findViewById(R.id.editTextEmail);
         editTextEdad = findViewById(R.id.editTextEdad);
@@ -59,14 +59,7 @@ public class CreateEmpleadoActivity extends AppCompatActivity {
         editTextDepartamento = findViewById(R.id.editTextDepartamento);
         editTextNumeroDocumento = findViewById(R.id.editTextNumeroDocumento);
 
-        regresar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish(); // Cierra la actividad actual
-            }
-        });
-
-        crear.setOnClickListener(new View.OnClickListener() {
+        buttonUpdateEmpleado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -83,21 +76,31 @@ public class CreateEmpleadoActivity extends AppCompatActivity {
                 String tipo_documento = editTextTipoDocumento.getText().toString();
                 String departamento = editTextDepartamento.getText().toString();
                 String numero_documento = editTextNumeroDocumento.getText().toString();
+                String ID = editTextID.getText().toString();
 
-                empleadoDao.insert(new Empleado(nombre,Apellido,numero_documento,fnacimiento,fcontratacion,estado,edad,direccion,departamento,cargo,email,"",telefono,tipo_documento), new OnSuccessListener<String>() {
+                empleadoDao.update(ID,new Empleado(nombre,Apellido,edad,email,direccion,telefono,cargo,fnacimiento,fcontratacion,estado,tipo_documento,departamento,numero_documento,""),new OnSuccessListener<Boolean>() {
                     @Override
-                    public void onSuccess(String s) {
+                    public void onSuccess(Boolean aBoolean) {
 
                     }
                 });
             }
         });
 
-    }
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        db.terminate();
-        db.clearPersistence();
-    }
+        buttonUpdateImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String empleadoID = editTextID.getText().toString();
+
+                // Crea el Intent y añade el texto como extra
+                Intent intent = new Intent(UpdateEmpleado.this, UpdateImage.class);
+                intent.putExtra("empleado_id", empleadoID); // "empleado_id" es la clave para recuperar el dato en UpdateEmpleado
+                startActivity(intent);
+
+            }
+
+        });
+
+}
 }

@@ -67,7 +67,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="direccion" />
+                    android:text="Ciudad" />
 
                 <TextView
                     android:id="@+id/userTelefonoTextView"
@@ -116,7 +116,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="numero_id" />
+                    android:text="numero_documento_identidad" />
 
                 <TextView
                     android:id="@+id/userDepartamentoTextView"

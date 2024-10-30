@@ -28,7 +28,7 @@ import java.util.Map;
 public class EmpleadoDao {
 
     private static final String TAG = "EmpleadoDao";
-    private static final String COLLECTION_NAME = "empleados";
+    private static final String COLLECTION_NAME = "empleadoss";
 
     private final FirebaseFirestore db;
 
@@ -49,20 +49,19 @@ public class EmpleadoDao {
      */
     public void insert(Empleado user, OnSuccessListener<String> listener) {
         Map<String, Object> userData = new HashMap<>();
-        userData.put("primer_nombre", user.getNombre());
-        userData.put("primer_apellido", user.getApellido());
         userData.put("edad", user.getEdad());
-        userData.put("correo", user.getEmail());
-        userData.put("direccion", user.getDireccion());
-        userData.put("telefono", user.getTelefono());
+        userData.put("correo", user.getCorreo());
+        userData.put("ciudad", user.getCiudad());
         userData.put("cargo", user.getCargo());
-        userData.put("fecha_nacimiento", user.getFnacimiento());
-        userData.put("fecha_contratacion", user.getFcontratacion());
-        userData.put("estado_empleado", user.getEstado());
-        userData.put("tipo_documento_identidad", user.getTipo_id());
-        userData.put("Numero_id", user.getNumero_id());
+        userData.put("fecha_nacimiento", user.getFecha_nacimiento());
+        userData.put("fecha_contratacion", user.getEstado_empleado());
+        userData.put("estado_empleado", user.getEstado_empleado());
         userData.put("departamento", user.getDepartamento());
+        userData.put("primer_nombre", user.getPrimer_nombre());
+        userData.put("primer_apellido", user.getPrimer_apellido());
         userData.put("image", "");
+        userData.put("telefono", user.getTelefono());
+        userData.put("tipo_documento_identidad", user.getTipo_documento_identidad());
 
         db.collection(COLLECTION_NAME)
                 .add(userData)
@@ -85,18 +84,17 @@ public class EmpleadoDao {
      */
     public void update(String id, Empleado user, OnSuccessListener<Boolean> listener) {
         Map<String, Object> userData = new HashMap<>();
-        userData.put("primer_nombre", user.getNombre());
-        userData.put("primer_apellido", user.getApellido());
+        userData.put("primer_nombre", user.getPrimer_nombre());
+        userData.put("primer_apellido", user.getPrimer_apellido());
         userData.put("edad", user.getEdad());
-        userData.put("correo", user.getEmail());
-        userData.put("direccion", user.getDireccion());
+        userData.put("correo", user.getCorreo());
+        userData.put("ciudad", user.getCiudad());
         userData.put("telefono", user.getTelefono());
         userData.put("cargo", user.getCargo());
-        userData.put("fecha_nacimiento", user.getFnacimiento());
-        userData.put("fecha_contratacion", user.getFcontratacion());
-        userData.put("estado_empleado", user.getEstado());
-        userData.put("tipo_documento_identidad", user.getTipo_id());
-        userData.put("Numero_id", user.getNumero_id());
+        userData.put("fecha_nacimiento", user.getFecha_nacimiento());
+        userData.put("fecha_contratacion", user.getEstado_empleado());
+        userData.put("estado_empleado", user.getEstado_empleado());
+        userData.put("tipo_documento_identidad", user.getTipo_documento_identidad());
         userData.put("departamento", user.getDepartamento());
 
         db.collection(COLLECTION_NAME)

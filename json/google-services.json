@@ -1,0 +1,51 @@
+{
+  "project_info": {
+    "project_number": "52571677766",
+    "project_id": "integrador-a519f",
+    "storage_bucket": "integrador-a519f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:52571677766:android:c6d8248fbb1ac2f5e4d647",
+        "android_client_info": {
+          "package_name": "com.example.androidxfirebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPuMU63cpNG6Yg4a6HLbqGFHJb6I3Q484"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:52571677766:android:6a88d674617dddcfe4d647",
+        "android_client_info": {
+          "package_name": "com.integrador"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPuMU63cpNG6Yg4a6HLbqGFHJb6I3Q484"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1",
+
+
+}
+

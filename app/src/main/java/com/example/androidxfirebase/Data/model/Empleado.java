@@ -2,97 +2,95 @@ package com.example.androidxfirebase.Data.model;
 
 public class Empleado {
 
-    private String tipo_id;
-    private String nombre;
-    private String apellido;
-    private String numero_id;
-    private String fnacimiento;
-    private String fcontratacion;
-    private String estado;
+    private String primer_nombre;
+    private String primer_apellido;
+    private String numero_documento_identidad;
+    private String fecha_nacimiento;
+    private String fecha_contratacion;
+    private String estado_empleado;
     private String edad;
-    private String direccion;
+    private String ciudad;
     private String departamento;
-    private String telefono;
     private String cargo;
+    private String correo;
     private String image;
-    private String email;
-    private String id;
+    private String telefono;
+    private String tipo_documento_identidad;
 
-    public Empleado(String nombre, String apellido, String edad, String email, String direccion, String telefono, String cargo, String fnacimiento, String fcontratacion, String estado, String tipo_documento, String documento, String departamento, String s) {
+    public Empleado() {
     }
 
-    public Empleado(String tipo_id, String nombre, String apellido, String numero_id, String fnacimiento, String fcontratacion, String estado, String edad, String direccion, String departamento, String telefono, String cargo, String image, String email,String id) {
-        this.tipo_id = tipo_id;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.numero_id = numero_id;
-        this.fnacimiento = fnacimiento;
-        this.fcontratacion = fcontratacion;
-        this.estado = estado;
+    public Empleado(String primer_nombre, String primer_apellido, String numero_documento_identidad, String fecha_nacimiento, String fecha_contratacion, String estado_empleado, String edad, String ciudad, String departamento, String cargo, String correo, String image, String telefono, String tipo_documento_identidad) {
+        this.primer_nombre = primer_nombre;
+        this.primer_apellido = primer_apellido;
+        this.numero_documento_identidad = numero_documento_identidad;
+        this.fecha_nacimiento = fecha_nacimiento;
+        this.fecha_contratacion = fecha_contratacion;
+        this.estado_empleado = estado_empleado;
         this.edad = edad;
-        this.direccion = direccion;
+        this.ciudad = ciudad;
         this.departamento = departamento;
-        this.telefono = telefono;
         this.cargo = cargo;
+        this.correo = correo;
         this.image = image;
-        this.email = email;
-        this.id = id;
+        this.telefono = telefono;
+        this.tipo_documento_identidad = tipo_documento_identidad;
     }
 
-    public String getTipo_id() {
-        return tipo_id;
+    public String getTipo_documento_identidad() {
+        return tipo_documento_identidad;
     }
 
-    public void setTipo_id(String tipo_id) {
-        this.tipo_id = tipo_id;
+    public void setTipo_documento_identidad(String tipo_documento_identidad) {
+        this.tipo_documento_identidad = tipo_documento_identidad;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getPrimer_nombre() {
+        return primer_nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setPrimer_nombre(String primer_nombre) {
+        this.primer_nombre = primer_nombre;
     }
 
-    public String getApellido() {
-        return apellido;
+    public String getPrimer_apellido() {
+        return primer_apellido;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public void setPrimer_apellido(String primer_apellido) {
+        this.primer_apellido = primer_apellido;
     }
 
-    public String getNumero_id() {
-        return numero_id;
+    public String getNumero_documento_identidad() {
+        return numero_documento_identidad;
     }
 
-    public void setNumero_id(String numero_id) {
-        this.numero_id = numero_id;
+    public void setNumero_documento_identidad(String numero_documento_identidad) {
+        this.numero_documento_identidad = numero_documento_identidad;
     }
 
-    public String getFnacimiento() {
-        return fnacimiento;
+    public String getFecha_nacimiento() {
+        return fecha_nacimiento;
     }
 
-    public void setFnacimiento(String fnacimiento) {
-        this.fnacimiento = fnacimiento;
+    public void setFecha_nacimiento(String fecha_nacimiento) {
+        this.fecha_nacimiento = fecha_nacimiento;
     }
 
-    public String getFcontratacion() {
-        return fcontratacion;
+    public String getFecha_contratacion() {
+        return fecha_contratacion;
     }
 
-    public void setFcontratacion(String fcontratacion) {
-        this.fcontratacion = fcontratacion;
+    public void setFecha_contratacion(String fecha_contratacion) {
+        this.fecha_contratacion = fecha_contratacion;
     }
 
-    public String getEstado() {
-        return estado;
+    public String getEstado_empleado() {
+        return estado_empleado;
     }
 
-    public void setEstado(String estado) {
-        this.estado = estado;
+    public void setEstado_empleado(String estado_empleado) {
+        this.estado_empleado = estado_empleado;
     }
 
     public String getEdad() {
@@ -103,12 +101,12 @@ public class Empleado {
         this.edad = edad;
     }
 
-    public String getDireccion() {
-        return direccion;
+    public String getCiudad() {
+        return ciudad;
     }
 
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
+    public void setCiudad(String ciudad) {
+        this.ciudad = ciudad;
     }
 
     public String getDepartamento() {
@@ -143,19 +141,11 @@ public class Empleado {
         this.image = image;
     }
 
-    public String getEmail() {
-        return email;
+    public String getCorreo() {
+        return correo;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
+    public void setCorreo(String correo) {
+        this.correo = correo;
     }
 }
