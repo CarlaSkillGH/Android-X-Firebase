@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Android X Firebase</string>
+    <string name="default_web_client_id">Tu ID de cliente web</string>
 </resources>

@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         Button btnCrearUsuarios = findViewById(R.id.btnCrearEmpleados);
         Button btnEliminarEmpleado = findViewById(R.id.btnEliminarEmpleado);
         Button btnEditarUsuarios = findViewById(R.id.btnEditar);
+        Button btnAuthentication = findViewById(R.id.btnAuthentication);
 
         btnEmpleados.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,6 +58,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, DeleteEmpleado.class);
+                startActivity(intent);
+            }
+        });
+
+        btnAuthentication.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Authentication.class);
                 startActivity(intent);
             }
         });

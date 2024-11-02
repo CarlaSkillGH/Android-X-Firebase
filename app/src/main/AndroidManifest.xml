@@ -15,6 +15,12 @@
         android:theme="@style/Theme.AndroidXFirebase"
         tools:targetApi="31">
         <activity
+            android:name=".Authentication"
+            android:exported="false" />
+        <activity
+            android:name=".Data.Home.Home"
+            android:exported="false" />
+        <activity
             android:name=".UpdateImage"
             android:exported="false" />
         <activity
