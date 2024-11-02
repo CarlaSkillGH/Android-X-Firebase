@@ -78,7 +78,7 @@ public class UpdateEmpleado extends AppCompatActivity {
                 String numero_documento = editTextNumeroDocumento.getText().toString();
                 String ID = editTextID.getText().toString();
 
-                empleadoDao.update(ID,new Empleado(nombre,Apellido,edad,email,direccion,telefono,cargo,fnacimiento,fcontratacion,estado,tipo_documento,departamento,numero_documento,""),new OnSuccessListener<Boolean>() {
+                empleadoDao.update(ID,new Empleado(nombre,Apellido,numero_documento,fnacimiento,fcontratacion,estado,edad,direccion,departamento,cargo,email,"",telefono,tipo_documento),new OnSuccessListener<Boolean>() {
                     @Override
                     public void onSuccess(Boolean aBoolean) {
 
