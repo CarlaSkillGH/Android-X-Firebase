@@ -24,43 +24,9 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        Button btnEmpleados = findViewById(R.id.btnEmpleados);
-        Button btnCrearUsuarios = findViewById(R.id.btnCrearEmpleados);
-        Button btnEliminarEmpleado = findViewById(R.id.btnEliminarEmpleado);
-        Button btnEditarUsuarios = findViewById(R.id.btnEditar);
+
         Button btnAuthentication = findViewById(R.id.btnAuthentication);
 
-        btnEmpleados.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ListEmpleadoActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        btnCrearUsuarios.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, CreateEmpleadoActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        btnEditarUsuarios.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, UpdateEmpleado.class);
-                startActivity(intent);
-            }
-        });
-
-        btnEliminarEmpleado.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, DeleteEmpleado.class);
-                startActivity(intent);
-            }
-        });
 
         btnAuthentication.setOnClickListener(new View.OnClickListener() {
             @Override

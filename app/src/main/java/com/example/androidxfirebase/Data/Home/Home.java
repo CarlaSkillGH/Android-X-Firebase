@@ -9,12 +9,18 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.androidxfirebase.Authentication;
+import com.example.androidxfirebase.CreateEmpleadoActivity;
+import com.example.androidxfirebase.DeleteEmpleado;
+import com.example.androidxfirebase.ListEmpleadoActivity;
+import com.example.androidxfirebase.MainActivity;
 import com.example.androidxfirebase.R;
+import com.example.androidxfirebase.UpdateEmpleado;
 import com.google.firebase.auth.FirebaseAuth;
 
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -34,6 +40,43 @@ public class Home extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        Button btnEmpleados = findViewById(R.id.btnEmpleados);
+        Button btnCrearUsuarios = findViewById(R.id.btnCrearEmpleados);
+        Button btnEliminarEmpleado = findViewById(R.id.btnEliminarEmpleado);
+        Button btnEditarUsuarios = findViewById(R.id.btnEditar);
+
+        btnEmpleados.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Home.this, ListEmpleadoActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnCrearUsuarios.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Home.this, CreateEmpleadoActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnEditarUsuarios.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Home.this, UpdateEmpleado.class);
+                startActivity(intent);
+            }
+        });
+
+        btnEliminarEmpleado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Home.this, DeleteEmpleado.class);
+                startActivity(intent);
+            }
         });
 
         // Inicializar Firebase Auth
@@ -69,6 +112,7 @@ public class Home extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
 
     @Override
     protected void onStart() {

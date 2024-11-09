@@ -24,35 +24,6 @@
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/btnEmpleados"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Empleados"
-        android:textColor="@color/black" />
-
-    <Button
-        android:id="@+id/btnEditar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Editar Empleado"
-        android:textColor="@color/black" />
-
-    <Button
-        android:id="@+id/btnCrearEmpleados"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Crear Empleados"
-        android:textColor="@color/black" />
-
-    <Button
-        android:id="@+id/btnEliminarEmpleado"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Eliminar Empleado"
-        android:textColor="@color/black"
-        android:textColorLink="@android:color/black" />
-
-    <Button
         android:id="@+id/btnAuthentication"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

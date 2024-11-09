@@ -7,17 +7,63 @@
     android:padding="16dp"
     android:gravity="center">
 
+
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/common_google_signin_btn_icon_dark" />
+
     <TextView
-        android:id="@+id/welcomeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="24dp"
+        android:text="Base de datos Control Inv"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnEmpleados"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Empleados"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/btnEditar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Editar Empleado"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/btnCrearEmpleados"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Crear Empleados"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/btnEliminarEmpleado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Eliminar Empleado"
+        android:textColor="@color/black"
+        android:textColorLink="@android:color/black" />
 
     <Button
         android:id="@+id/logoutButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cerrar Sesión"/>
+        android:text="Cerrar Sesión" />
+
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:textSize="18sp" />
 
 </LinearLayout>

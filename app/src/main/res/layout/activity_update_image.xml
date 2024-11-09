@@ -52,12 +52,5 @@
         android:textColor="@color/black"
         android:textColorLink="@android:color/black" />
 
-    <Button
-        android:id="@+id/btnAuthentication"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Authentication"
-        android:textColor="@color/black"
-        android:textColorLink="@android:color/black" />
 
 </LinearLayout>
