@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
+    android:background="@color/md_theme_onPrimaryContainer"
     android:padding="16dp">
 
     <ImageView
@@ -19,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:text="Base de datos Control Inv"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -28,28 +29,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Empleados"
-        android:textColor="@color/black" />
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/btnEditar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Editar Empleado"
-        android:textColor="@color/black" />
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/btnCrearEmpleados"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Crear Empleados"
-        android:textColor="@color/black" />
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/btnEliminarEmpleado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Eliminar Empleado"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textColorLink="@android:color/black" />
 
 

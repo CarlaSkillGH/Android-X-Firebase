@@ -3,19 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/md_theme_onSecondaryFixed">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="716dp"
         android:layout_margin="8dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
         app:cardUseCompatPadding="true">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="350dp"
+            android:layout_height="663dp"
+            android:background="@color/md_theme_onPrimaryContainer"
             android:orientation="horizontal"
             android:padding="16dp">
 
@@ -39,91 +41,130 @@
                     android:layout_height="wrap_content"
                     android:text="primer_nombre"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textColor="#FAF7F7"
+                    android:textColorHighlight="#FDFCFC"
+                    android:textColorHint="#FAF8F8"/>
 
                 <TextView
                     android:id="@+id/userApellidoTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="primer_apellido" />
+                    android:text="primer_apellido"
+                    android:textColor="#FAF7F7"
+                    android:textColorHighlight="#FDFCFC"
+                    android:textColorHint="#FAF8F8"/>
 
                 <TextView
                     android:id="@+id/userEdadTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="edad" />
+                    android:text="edad"
+                    android:textColor="#FAF7F7"
+                    android:textColorHighlight="#FDFCFC"
+                    android:textColorHint="#FAF8F8"/>
 
                 <TextView
                     android:id="@+id/userEmailTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="correo" />
+                    android:text="correo"
+                    android:textColor="#FAF7F7"
+                    android:textColorHighlight="#FDFCFC"
+                    android:textColorHint="#FAF8F8"/>
 
                 <TextView
                     android:id="@+id/userDireccionTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="Ciudad" />
+                    android:text="Ciudad"
+                    android:textColor="#FAF7F7"
+                    android:textColorHighlight="#FDFCFC"
+                    android:textColorHint="#FAF8F8"/>
 
                 <TextView
                     android:id="@+id/userTelefonoTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="telefono" />
+                    android:text="telefono"
+                    android:textColor="#FAF7F7"
+                    android:textColorHighlight="#FDFCFC"
+                    android:textColorHint="#FAF8F8"/>
 
                 <TextView
                     android:id="@+id/userCargoTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="cargo" />
+                    android:text="cargo"
+                    android:textColor="#FAF7F7"
+                    android:textColorHighlight="#FDFCFC"
+                    android:textColorHint="#FAF8F8"/>
 
                 <TextView
                     android:id="@+id/userFnacimientoTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="fecha_nacimiento" />
+                    android:text="fecha_nacimiento"
+                    android:textColor="#FAF7F7"
+                    android:textColorHighlight="#FDFCFC"
+                    android:textColorHint="#FAF8F8"/>
 
                 <TextView
                     android:id="@+id/userFcontratacionTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="fecha_contratacion" />
+                    android:text="fecha_contratacion"
+                    android:textColor="#FAF7F7"
+                    android:textColorHighlight="#FDFCFC"
+                    android:textColorHint="#FAF8F8"/>
 
                 <TextView
                     android:id="@+id/userEstadoTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="estado_empleado" />
+                    android:text="estado_empleado"
+                    android:textColor="#FAF7F7"
+                    android:textColorHighlight="#FDFCFC"
+                    android:textColorHint="#FAF8F8"/>
 
                 <TextView
                     android:id="@+id/userTipo_idTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="tipo_documento_identidad" />
+                    android:text="tipo_documento_identidad"
+                    android:textColor="#FAF7F7"
+                    android:textColorHighlight="#FDFCFC"
+                    android:textColorHint="#FAF8F8"/>
 
                 <TextView
                     android:id="@+id/userNumero_idTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="numero_documento_identidad" />
+                    android:text="numero_documento_identidad"
+                    android:textColor="#FAF7F7"
+                    android:textColorHighlight="#FDFCFC"
+                    android:textColorHint="#FAF8F8"/>
 
                 <TextView
                     android:id="@+id/userDepartamentoTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="departamento" />
+                    android:text="departamento"
+                    android:textColor="#FAF7F7"
+                    android:textColorHighlight="#FDFCFC"
+                    android:textColorHint="#FAF8F8" />
 
 
             </LinearLayout>
