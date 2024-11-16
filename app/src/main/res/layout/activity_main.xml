@@ -13,7 +13,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginBottom="16dp"
-        android:src="@drawable/common_google_signin_btn_icon_dark" />
+        android:src="@drawable/logo" />
 
     <TextView
         android:layout_width="wrap_content"
