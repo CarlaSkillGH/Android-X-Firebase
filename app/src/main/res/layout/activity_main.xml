@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
+    android:background="@color/md_theme_onPrimaryContainer"
     android:padding="16dp">
 
     <ImageView
@@ -12,14 +13,14 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginBottom="16dp"
-        android:src="@drawable/common_google_signin_btn_icon_dark" />
+        android:src="@drawable/logo" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:text="Base de datos Control Inv"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -28,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Authentication"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textColorLink="@android:color/black" />
 
 </LinearLayout>

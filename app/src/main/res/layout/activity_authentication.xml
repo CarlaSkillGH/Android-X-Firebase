@@ -3,9 +3,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/md_theme_onSecondaryFixed"
+    android:gravity="center"
     android:orientation="vertical"
-    android:padding="16dp"
-    android:gravity="center">
+    android:padding="16dp">
 
     <EditText
         android:id="@+id/emailEditText"
@@ -14,7 +15,11 @@
         android:layout_marginBottom="8dp"
         android:hint="Email"
         android:inputType="textEmailAddress"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FAF7F7"
+        android:textColorHint="#FBFAFA"
+        android:textColorLink="#FAF7F7" />
 
     <EditText
         android:id="@+id/passwordEditText"
@@ -23,26 +28,30 @@
         android:layout_marginBottom="16dp"
         android:hint="Contraseña"
         android:inputType="textPassword"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:textColor="#F0F0F0"
+        android:textColorHighlight="#FFFEFE"
+        android:textColorHint="#FAF6F6"
+        android:textColorLink="#FBF7F7" />
 
     <Button
         android:id="@+id/loginButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Iniciar Sesión"
-        android:layout_marginBottom="8dp"/>
+        android:layout_marginBottom="8dp"
+        android:text="Iniciar Sesión" />
 
     <Button
         android:id="@+id/registerButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Registrarse"
-        android:layout_marginBottom="8dp"/>
+        android:layout_marginBottom="8dp"
+        android:text="Registrarse" />
 
     <Button
         android:id="@+id/oneTapSignInButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Iniciar sesión con Google"/>
+        android:text="Iniciar sesión con Google" />
 
 </LinearLayout>

@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:background="@color/md_theme_onPrimaryContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DeleteEmpleado">
@@ -12,6 +13,10 @@
         android:layout_width="0dp"
         android:layout_height="63dp"
         android:hint="Digite el ID del empleado a eliminar"
+        android:textColor="@color/white"
+        android:textColorHighlight="@color/white"
+        android:textColorHint="@color/white"
+        android:textColorLink="@color/white"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
