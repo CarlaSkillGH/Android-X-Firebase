@@ -15,6 +15,27 @@
         android:theme="@style/AppTheme"
         tools:targetApi="31">
         <activity
+            android:name=".CrudAsistenciaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CrudEmpleadoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UpdateAsistenciaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DeleteAsistenciaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateAsistenciaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListAsistenciaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Data.adapter.AsistenciaAdapter"
+            android:exported="false" />
+        <activity
             android:name=".Authentication"
             android:exported="false" />
         <activity

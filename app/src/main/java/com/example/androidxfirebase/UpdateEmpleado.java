@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.activity.result.ActivityResultLauncher;
@@ -84,7 +85,25 @@ public class UpdateEmpleado extends AppCompatActivity {
 
                     }
                 });
+                editTextEmpleadoname.setText("");
+                editTextApellido.setText("");
+                editTextEdad.setText("");
+                editTextEmail.setText("");
+                editTextDireccion.setText("");
+                editTextTelefono.setText("");
+                editTextCargo.setText("");
+                editTextFnacimiento.setText("");
+                editTextFcontratacion.setText("");
+                editTextEstado.setText("");
+                editTextTipoDocumento.setText("");
+                editTextEstado.setText("");
+                editTextTipoDocumento.setText("");
+                editTextDepartamento.setText("");
+                editTextNumeroDocumento.setText("");
+                editTextID.setText("");
+                Toast.makeText(UpdateEmpleado.this,"Empleado actualizado",Toast.LENGTH_SHORT).show();
             }
+
         });
 
         buttonUpdateImage.setOnClickListener(new View.OnClickListener() {

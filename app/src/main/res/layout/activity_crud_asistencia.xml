@@ -27,18 +27,33 @@
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/btnEmpleados"
+        android:id="@+id/btnAsistenciaa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Crud Empleados"
+        android:text="Asistencias"
         android:textColor="@color/white" />
 
     <Button
-        android:id="@+id/btnAsistencia"
+        android:id="@+id/btnEditarAsistencia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Crud Asistencia"
+        android:text="Editar Asistencia"
         android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btnCrearAsistencia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Crear Asistencia"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btnEliminarAsistencia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Eliminar Asistencia"
+        android:textColor="@color/white"
+        android:textColorLink="@android:color/black" />
 
     <Button
         android:id="@+id/logoutButton"

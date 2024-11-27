@@ -12,22 +12,23 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.androidxfirebase.Data.dao.AsistenciaDao;
 import com.example.androidxfirebase.Data.dao.EmpleadoDao;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-public class DeleteEmpleado extends AppCompatActivity {
+public class DeleteAsistenciaActivity extends AppCompatActivity {
 
     private FirebaseFirestore db;
-    private EmpleadoDao empleadoDao;
+    private AsistenciaDao asistenciaDao;
     private Button eliminar;
-    private EditText editTextNumeroDocumento;
+    private EditText editTextNumeroAsistencia;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_delete_empleado);
+        setContentView(R.layout.activity_delete_asistencia);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -35,22 +36,22 @@ public class DeleteEmpleado extends AppCompatActivity {
         });
 
         db = FirebaseFirestore.getInstance();
-        empleadoDao = new EmpleadoDao(db);
+        asistenciaDao = new AsistenciaDao(db);
 
         eliminar = findViewById(R.id.btnEliminar);
-        editTextNumeroDocumento = findViewById(R.id.editTextNumeroDocumento);
+        editTextNumeroAsistencia = findViewById(R.id.editTextNumeroAsistencia);
 
         eliminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                empleadoDao.delete(editTextNumeroDocumento.getText().toString(), new OnSuccessListener<Boolean>() {
+                asistenciaDao.delete(editTextNumeroAsistencia.getText().toString(), new OnSuccessListener<Boolean>() {
                     @Override
                     public void onSuccess(Boolean aBoolean) {
 
                     }
                 });
-                editTextNumeroDocumento.setText("");
-                Toast.makeText(DeleteEmpleado.this,"Empleado eliminado",Toast.LENGTH_SHORT).show();
+                editTextNumeroAsistencia.setText("");
+                Toast.makeText(DeleteAsistenciaActivity.this,"Asistencia eliminada",Toast.LENGTH_SHORT).show();
             }
         });
 

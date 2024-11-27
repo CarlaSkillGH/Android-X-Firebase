@@ -10,6 +10,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.androidxfirebase.Authentication;
 import com.example.androidxfirebase.CreateEmpleadoActivity;
+import com.example.androidxfirebase.CrudAsistenciaActivity;
+import com.example.androidxfirebase.CrudEmpleadoActivity;
 import com.example.androidxfirebase.DeleteEmpleado;
 import com.example.androidxfirebase.ListEmpleadoActivity;
 import com.example.androidxfirebase.MainActivity;
@@ -43,14 +45,13 @@ public class Home extends AppCompatActivity {
         });
 
         Button btnEmpleados = findViewById(R.id.btnEmpleados);
-        Button btnCrearUsuarios = findViewById(R.id.btnCrearEmpleados);
-        Button btnEliminarEmpleado = findViewById(R.id.btnEliminarEmpleado);
-        Button btnEditarUsuarios = findViewById(R.id.btnEditar);
+        Button btnCrearUsuarios = findViewById(R.id.btnAsistencia);
+
 
         btnEmpleados.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this, ListEmpleadoActivity.class);
+                Intent intent = new Intent(Home.this, CrudEmpleadoActivity.class);
                 startActivity(intent);
             }
         });
@@ -58,26 +59,11 @@ public class Home extends AppCompatActivity {
         btnCrearUsuarios.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this, CreateEmpleadoActivity.class);
+                Intent intent = new Intent(Home.this, CrudAsistenciaActivity.class);
                 startActivity(intent);
             }
         });
 
-        btnEditarUsuarios.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Home.this, UpdateEmpleado.class);
-                startActivity(intent);
-            }
-        });
-
-        btnEliminarEmpleado.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Home.this, DeleteEmpleado.class);
-                startActivity(intent);
-            }
-        });
 
         // Inicializar Firebase Auth
         auth = FirebaseAuth.getInstance();

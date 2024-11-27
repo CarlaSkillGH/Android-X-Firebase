@@ -30,15 +30,30 @@
         android:id="@+id/btnEmpleados"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Crud Empleados"
+        android:text="Empleados"
         android:textColor="@color/white" />
 
     <Button
-        android:id="@+id/btnAsistencia"
+        android:id="@+id/btnEditar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Crud Asistencia"
+        android:text="Editar Empleado"
         android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btnCrearEmpleados"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Crear Empleados"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btnEliminarEmpleado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Eliminar Empleado"
+        android:textColor="@color/white"
+        android:textColorLink="@android:color/black" />
 
     <Button
         android:id="@+id/logoutButton"

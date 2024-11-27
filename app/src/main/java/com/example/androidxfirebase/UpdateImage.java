@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.activity.result.ActivityResultLauncher;
@@ -15,6 +16,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.androidxfirebase.Data.Home.Home;
 import com.example.androidxfirebase.Data.dao.EmpleadoDao;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -52,6 +54,7 @@ public class UpdateImage extends AppCompatActivity {
                     public void onSuccess(Boolean aBoolean) {
 
                     }
+
                 });
             } else {
                 Log.d("PhotoPicker", "No media selected");
@@ -62,15 +65,12 @@ public class UpdateImage extends AppCompatActivity {
         pickSingleMedia.launch(new PickVisualMediaRequest.Builder().setMediaType(ActivityResultContracts.PickVisualMedia.ImageOnly.INSTANCE).build());
 
         Button btnEmpleados = findViewById(R.id.btnEmpleados);
-        Button btnCrearUsuarios = findViewById(R.id.btnCrearEmpleados);
-        Button btnEliminarEmpleado = findViewById(R.id.btnEliminarEmpleado);
-        Button btnEditarUsuarios = findViewById(R.id.btnEditar);
-
+        Button btnCrearUsuarios = findViewById(R.id.btnAsistencia);
 
         btnEmpleados.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(UpdateImage.this, ListEmpleadoActivity.class);
+                Intent intent = new Intent(UpdateImage.this, CrudEmpleadoActivity.class);
                 startActivity(intent);
             }
         });
@@ -78,27 +78,10 @@ public class UpdateImage extends AppCompatActivity {
         btnCrearUsuarios.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(UpdateImage.this, CreateEmpleadoActivity.class);
+                Intent intent = new Intent(UpdateImage.this, CrudAsistenciaActivity.class);
                 startActivity(intent);
             }
         });
-
-        btnEditarUsuarios.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(UpdateImage.this, UpdateEmpleado.class);
-                startActivity(intent);
-            }
-        });
-
-        btnEliminarEmpleado.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(UpdateImage.this, DeleteEmpleado.class);
-                startActivity(intent);
-            }
-        });
-
 
     }
 

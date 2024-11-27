@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.activity.result.ActivityResultLauncher;
@@ -22,7 +23,7 @@ import com.example.androidxfirebase.Data.model.Empleado;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-public class CreateEmpleadoActivity extends AppCompatActivity {
+public class  CreateEmpleadoActivity extends AppCompatActivity {
 
     private FirebaseFirestore db;
     private EmpleadoDao empleadoDao;
@@ -90,6 +91,20 @@ public class CreateEmpleadoActivity extends AppCompatActivity {
 
                     }
                 });
+                editTextEmpleadoname.setText("");
+                editTextApellido.setText("");
+                editTextEdad.setText("");
+                editTextEmail.setText("");
+                editTextDireccion.setText("");
+                editTextTelefono.setText("");
+                editTextCargo.setText("");
+                editTextFnacimiento.setText("");
+                editTextFcontratacion.setText("");
+                editTextEstado.setText("");
+                editTextTipoDocumento.setText("");
+                editTextDepartamento.setText("");
+                editTextNumeroDocumento.setText("");
+                Toast.makeText(CreateEmpleadoActivity.this,"Empleado creado",Toast.LENGTH_SHORT).show();
             }
         });
 
