@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:targetApi="31">
+        <activity
+            android:name=".CrudAsistenciaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CrudEmpleadoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UpdateAsistenciaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DeleteAsistenciaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateAsistenciaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListAsistenciaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Data.adapter.AsistenciaAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".Authentication"
+            android:exported="false" />
+        <activity
+            android:name=".Data.Home.Home"
+            android:exported="false" />
+        <activity
+            android:name=".UpdateImage"
+            android:exported="false" />
+        <activity
+            android:name=".UpdateEmpleado"
+            android:exported="false" />
+        <activity
+            android:name=".DeleteEmpleado"
+            android:exported="false" />
+        <activity
+            android:name=".CreateEmpleadoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListEmpleadoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
